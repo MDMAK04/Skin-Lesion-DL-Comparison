@@ -1,0 +1,23 @@
+# Modèles et données (trop lourds pour GitHub : limite 100 Mo par fichier)
+*.keras
+*.onnx
+*.h5
+*.weights.h5
+data/
+HAM500*/
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+# OS / IDE
+.DS_Store
+.vscode/
+.env
+
+.venv/

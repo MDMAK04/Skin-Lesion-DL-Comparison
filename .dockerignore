@@ -1,0 +1,7 @@
+.git
+*.keras
+notebooks
+report
+results
+tests
+docs

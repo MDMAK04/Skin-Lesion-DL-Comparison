@@ -1,0 +1,28 @@
+:root { --bg:#f5f7fb; --card:#fff; --text:#1c2333; --muted:#6b7280; --accent:#2563eb; --warn:#fff4e5; --warn-b:#f59e0b; --err:#b91c1c; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0f172a; --card:#1e293b; --text:#e5e7eb; --muted:#94a3b8; --accent:#60a5fa; --warn:#3b2f14; --warn-b:#f59e0b; --err:#f87171; }
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+.container { max-width: 860px; margin: 0 auto; padding: 24px 16px 40px; }
+h1 { margin: 0 0 4px; font-size: 1.7rem; }
+.subtitle { margin: 0 0 20px; color: var(--muted); }
+.warning { background: var(--warn); border-left: 4px solid var(--warn-b); padding: 12px 14px; border-radius: 8px; margin-bottom: 20px; font-size: .92rem; }
+.dropzone { background: var(--card); border: 2px dashed var(--muted); border-radius: 12px; padding: 36px 16px; text-align: center; cursor: pointer; transition: border-color .15s; }
+.dropzone:hover, .dropzone.drag, .dropzone:focus { border-color: var(--accent); outline: none; }
+.hint { color: var(--muted); font-size: .85rem; margin: 4px 0 0; }
+.result { display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; margin-top: 20px; background: var(--card); padding: 18px; border-radius: 12px; }
+@media (max-width: 640px) { .result { grid-template-columns: 1fr; } }
+.preview img { width: 100%; border-radius: 8px; display: block; }
+.label { margin: 0; color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+#topName { margin: 2px 0; font-size: 1.35rem; }
+.topprob { margin: 0 0 14px; font-size: 1.05rem; color: var(--accent); font-weight: 600; }
+.bar-row { display: grid; grid-template-columns: 70px 1fr 52px; gap: 8px; align-items: center; font-size: .88rem; margin: 5px 0; }
+.bar-track { background: rgba(120,130,150,.25); border-radius: 6px; height: 10px; overflow: hidden; }
+.bar-fill { background: var(--accent); height: 100%; border-radius: 6px; }
+.bar-row.top .bar-fill { background: #16a34a; }
+.bar-val { text-align: right; font-variant-numeric: tabular-nums; }
+.loading { color: var(--muted); }
+.error { color: var(--err); font-weight: 600; }
+footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: .85rem; }
+footer a { color: var(--accent); }

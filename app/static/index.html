@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAM500 · Classification de lésions cutanées</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Classification de lésions cutanées</h1>
+      <p class="subtitle">ResNet50 Fine-Tuning · dataset HAM500 · 7 classes</p>
+    </header>
+
+    <div class="warning">
+      <strong>Projet pédagogique, pas un outil médical.</strong>
+      Le modèle a été entraîné sur 320 images seulement et reconnaît mal les classes rares
+      (voir les résultats dans le README). Il ne remplace en aucun cas l'avis d'un dermatologue.
+    </div>
+
+    <section id="dropzone" class="dropzone" tabindex="0">
+      <input id="file" type="file" accept="image/jpeg,image/png,image/webp,image/bmp" hidden>
+      <p><strong>Glisse une image ici</strong> ou clique pour en choisir une</p>
+      <p class="hint">JPEG, PNG, WEBP ou BMP · 10 Mo max</p>
+    </section>
+
+    <section id="result" class="result" hidden>
+      <div class="preview"><img id="preview" alt="Image analysée"></div>
+      <div class="output">
+        <div id="loading" class="loading" hidden>Analyse en cours…</div>
+        <div id="error" class="error" hidden></div>
+        <div id="prediction" hidden>
+          <p class="label">Classe prédite</p>
+          <h2 id="topName"></h2>
+          <p id="topProb" class="topprob"></p>
+          <div id="bars"></div>
+          <p id="meta" class="hint"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Atelier Deep Learning · Master MLAIM · Pr. A. Sabri · <a href="/docs">Documentation de l'API</a>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

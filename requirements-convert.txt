@@ -1,0 +1,5 @@
+# Uniquement pour convertir le modèle Keras -> ONNX (pas nécessaire pour lancer l'application)
+tensorflow-cpu>=2.19,<2.22
+tf2onnx==1.17.0
+onnx>=1.16
+onnxruntime>=1.18

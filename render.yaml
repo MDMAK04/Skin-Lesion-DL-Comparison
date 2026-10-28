@@ -1,0 +1,12 @@
+# Blueprint Render : déploiement gratuit depuis GitHub (New > Blueprint)
+services:
+  - type: web
+    name: ham500-classifier
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_REPO_ID
+        value: simo21Ms/ham500-resnet50-finetune
+      - key: MODEL_FILENAME
+        value: resnet50_finetune.onnx
